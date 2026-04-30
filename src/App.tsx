@@ -2,13 +2,7 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { HiExternalLink } from "react-icons/hi";
-import {
-  FaFileAlt,
-  FaVideo,
-  FaDollarSign,
-  FaPaw,
-  FaCode,
-} from "react-icons/fa";
+import { FaDollarSign, FaPaw, FaCode } from "react-icons/fa";
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(0);
@@ -16,11 +10,14 @@ export default function Portfolio() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    const timeoutId = setTimeout(() => {
+      setIsLoaded(true);
+    }, 0);
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener("mousemove", handleMouseMove);
+    clearTimeout(timeoutId);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
