@@ -96,24 +96,26 @@ export default function Portfolio() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
         {/* Header */}
+
         <header
-          className={`mb-32 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
+          className={`mb-20 md:mb-32 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
         >
-          <div className="flex justify-between items-start mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12 text-center md:text-left">
             <div>
               <h1
-                className="text-7xl font-bold mb-4 bg-clip-text text-transparent bg-linear-to-r from-white via-blue-100 to-cyan-200"
+                className="text-4xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-linear-to-r from-white via-blue-100 to-cyan-200"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 Brandford Junior Korang-Teku
               </h1>
               <p
-                className="text-2xl text-slate-400"
+                className="text-xl md:text-2xl text-slate-400"
                 style={{ fontFamily: "'Source Sans Pro', sans-serif" }}
               >
                 Full-Stack Developer
               </p>
             </div>
+
             <div className="flex gap-4">
               <a
                 href="https://github.com/brandford7"
@@ -136,16 +138,12 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10 text-center md:text-left">
               <div className="text-4xl font-bold text-cyan-400 mb-2">3+</div>
               <div className="text-slate-400">Years Experience</div>
             </div>
-            {/*<div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10">
-              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-slate-400">Projects Completed</div>
-            </div>*/}
-            <div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10">
+            <div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10 text-center md:text-left">
               <div className="text-4xl font-bold text-pink-400 mb-2">10+</div>
               <div className="text-slate-400">Technologies</div>
             </div>
