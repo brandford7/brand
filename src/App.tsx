@@ -10,14 +10,11 @@ export default function Portfolio() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsLoaded(true);
-    }, 0);
+    setIsLoaded(true);
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener("mousemove", handleMouseMove);
-    clearTimeout(timeoutId);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
@@ -34,10 +31,10 @@ export default function Portfolio() {
    */
 
     {
-      title: "Betting Tips Platform",
+      title: "Football Prediction Platform",
       category: "Multi-Region SaaS",
       description:
-        "Pan-African betting platform with VIP tip filtering, crypto payments, and multi-gateway integration",
+        "A football prediction platform with VIP subscription features, filtering, crypto payments, and multi-gateway integration",
       tech: [
         "NestJS",
         "Nuxt 3",
@@ -75,10 +72,12 @@ export default function Portfolio() {
   const skills = [
     { name: "React & Next.js" },
     { name: "Vue & Nuxt 3" },
-    { name: "TypeScript" },
-    { name: "NestJS" },
+    { name: "Javascript & TypeScript" },
+    { name: "Express.js & NestJS" },
     { name: "Spring Boot" },
     { name: ".NET Core" },
+    { name: "PostgreSQL & MongoDB" },
+    { name: "Microsoft Dynamics ERP" },
   ];
 
   return (
@@ -112,24 +111,24 @@ export default function Portfolio() {
                 className="text-2xl text-slate-400"
                 style={{ fontFamily: "'Source Sans Pro', sans-serif" }}
               >
-                Full-Stack Developer & Technical Architect
+                Full-Stack Developer
               </p>
             </div>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/brandford7"
                 className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110"
               >
                 <FaGithub className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/brandford-junior-korang-teku"
                 className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110"
               >
                 <FaLinkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:brandfordjunior@gmail.com"
                 className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110"
               >
                 <MdEmail className="w-5 h-5" />
@@ -139,13 +138,13 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-3 gap-6">
             <div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">5+</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">3+</div>
               <div className="text-slate-400">Years Experience</div>
             </div>
-            <div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10">
+            {/*<div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10">
               <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
               <div className="text-slate-400">Projects Completed</div>
-            </div>
+            </div>*/}
             <div className="p-6 rounded-2xl bg-linear-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10">
               <div className="text-4xl font-bold text-pink-400 mb-2">10+</div>
               <div className="text-slate-400">Technologies</div>
@@ -302,15 +301,18 @@ export default function Portfolio() {
               robust SaaS platform or a complex enterprise application, let's
               discuss how I can help.
             </p>
-            <button className="px-8 py-4 rounded-full bg-linear-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
+            <a
+              href="mailto:brandfordjunior@gmail.com"
+              className="px-8 py-4 rounded-full bg-linear-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+            >
               Get In Touch
-            </button>
+            </a>
           </div>
         </section>
 
         {/* Footer */}
         <footer className="mt-32 pt-8 border-t border-white/10 text-center text-slate-500">
-          <p>&copy; 2026 Brandford Korang-Teku. All rights reserved.</p>
+          <p>&copy; 2026 Brandford Junior Korang-Teku. All rights reserved.</p>
         </footer>
       </div>
 
